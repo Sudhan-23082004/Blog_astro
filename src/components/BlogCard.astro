@@ -1,0 +1,15 @@
+
+---
+import FormattedDate from '../components/FormattedDate.astro' 
+
+const{title, date, slug} =Astro.props;
+---
+
+<a href={`/blog/${slug}`} >
+
+<article class="flex flex-row items-center justify-between w-full">
+    <h3 class="text-base text-balck">{title}</h3>
+    <p class="text-gray-500 text-base p-5"><FormattedDate date={date}/></p>
+
+</article>
+</a>
